@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap");
+:root {
+  --mainColor: #ffb32f;
+}
+::selection {
+  background-color: var(--mainColor);
+  color: #333;
+}
+body {
+  font-family: "Oswald", sans-serif;
+  background-color: #111;
+}
+.container {
+  color: #fff;
+  background-color: #000;
+  width: 30%;
+  padding: 40px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  text-align: center;
+}
+#color {
+  color: var(--mainColor);
+  font-weight: 300;
+}
+#btn {
+  padding: 10px 20px;
+  outline: none;
+  border: 1px solid;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: #000;
+  background-color: var(--mainColor);
+}
+#btn:hover {
+  background-color: transparent;
+  color: var(--mainColor);
+}
+.fa-clipboard {
+  position: absolute;
+  color: var(--mainColor);
+  font-size: 1.5rem;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+/* Logo */
+.logo {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: 0;
+  left: 5rem;
+  z-index: 3;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 2rem 0.5rem 0.5rem;
+}
+.logo:hover {
+  background-color: #000;
+}
+/* Footer */
+.credit p {
+    position: absolute;
+    bottom: 2rem;
+    left: 5rem;
+    color: #fff;
+    z-index: 4;
+  }
+  .credit a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #fff;
+  }
+  .credit a:hover {
+    text-decoration: underline;
+  }
+@media (max-width:768px) {
+    .logo,.credit p{
+        left: 1.5rem;
+    }
+    .container{
+        width: 70%;
+    }
+}
+@media (max-width:375px) {
+    .container h2{
+        font-size: 1.2rem;
+    }
+}
